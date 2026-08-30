@@ -27,7 +27,6 @@ public class Problem1 {
                 }
                 if (product > largest) {
                     largest = product;
-                    // System.out.printf("New largest product found: %d\n", largest);
                     product = 1;
                 }
                 product = 1;

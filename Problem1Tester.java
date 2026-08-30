@@ -44,5 +44,11 @@ public class Problem1Tester {
         TestSupport.checkEquals(120L, 
                 Problem1.largestProduct("123456321", 3), 
                 "10. Input should return largest product of consecutive digits");
+            
+        TestSupport.checkEquals(6L, 
+                Problem1.largestProduct("123456", 1), 
+                "11. Input should return largest product of consecutive digits");
+
+        TestSupport.finish();
     }
 }
