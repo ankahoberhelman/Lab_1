@@ -4,12 +4,46 @@ package assignment1;
 public class Problem1Tester {
     public static void main(String[] args) {
         // Example of the required format only. Replace/add cases based on the specification.
+        //Simple Inspection Tests
         TestSupport.checkEquals(5832L,
                 Problem1.largestProduct("9989", 4),
                 "example-sized prefix");
-
-        // TODO: Add tests that exercise distinct behaviors and boundary cases.
-
+        TestSupport.checkEquals(12L,
+                Problem1.largestProduct("1234", 2),
+                "Correct Outputs");
+        TestSupport.checkEquals(72L,
+                Problem1.largestProduct("9876", 2),
+                "Correct Outputs");
+        //Incorrect Outputs Tests     
+        //Zero Test and best answer uses fewer than n digits
+        TestSupport.checkEquals(81L,
+                Problem1.largestProduct("9099", 4),
+                "Input with zeros should still output largest product of non-zero digits");
+        TestSupport.checkEquals(1L,
+                Problem1.largestProduct("10101010", 4),
+                "Input with zeros should still output largest product of non-zero digits");
+        
+        // n > string length Test
+        TestSupport.checkEquals(9L, 
+                Problem1.largestProduct("90909", 6), 
+                "Input with n larger than string length should still return largest product of non-zero digits");
+        
+        // Boundary Tests
+        TestSupport.checkEquals(5L,
+                Problem1.largestProduct("123451234", 1),
+                "Input with n = 1 should return largest digit");
+        
+        TestSupport.checkEquals(1L,
+                Problem1.largestProduct("1", 1),
+                "Input with n = 1 and string length = 1 should return the only digit");
+        
+        TestSupport.checkEquals(25L,
+                Problem1.largestProduct("55555555", 2),
+                "Input with zeros should still output largest product of non-zero digits");
+        
+        TestSupport.checkEquals(120L, 
+                Problem1.largestProduct("123456321", 3), 
+                "Input should return largest product of consecutive digits");
         TestSupport.finish();
     }
 }
