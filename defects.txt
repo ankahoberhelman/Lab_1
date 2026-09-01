@@ -1,0 +1,25 @@
+Problem 1
+It would only loop through n length for the max multiple, which means if there was 
+a number like 90909 like in my test case number 6, it would output 0 instead of 9.
+Most of the testcases written were to point out this defect.
+
+Additionally, it had no bounds for 2 <= n <= 20, so in case number 7, it showed that
+the original code would output the greatest number rather than fail out gracefully.
+
+The original code also didn't have cases where n > s.length which meant the code would 
+fail out instantly rather continuing to the n value = s.length and going from there.
+
+Problem 2
+Testcase one points out the issue when there is an appostrophy in the word where it
+will skip the last letter rather than skip the non-character and then count the last
+character. In simpler terms, it stops at puncuation rather than counting it as zero.
+
+If there is no space between a word.word, then that counts as one rather than two words,
+so an entire word is skipped.
+
+It converts the output to lowercase rather than preserving the original casing
+
+Splits only on single space so it can't handle multiple spaces in a row, leading spaces,
+trailing spaces, or tabs/other whitespace
+
+

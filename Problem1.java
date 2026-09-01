@@ -19,6 +19,10 @@ public class Problem1 {
         if (n > s.length()) {
             n = s.length();
         }
+        if (n > 20 || n < 2) {
+            System.out.println("n must be between 2 and 20 inclusive.");
+            return -1;
+        }
         for (int i = 0; i < s.length(); i++) {
             long product = 1;
             for(int k = 0; k < n; k++) {

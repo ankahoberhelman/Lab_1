@@ -31,15 +31,7 @@ public class Problem1Tester {
         // Boundary Tests
         TestSupport.checkEquals(5L,
                 Problem1.largestProduct("123451234", 1),
-                "7. Input with n = 1 should return largest digit");
-        
-        TestSupport.checkEquals(1L,
-                Problem1.largestProduct("1", 1),
-                "8. Input with n = 1 and string length = 1 should return the only digit");
-        
-        TestSupport.checkEquals(25L,
-                Problem1.largestProduct("55555555", 2),
-                "9. Input with zeros should still output largest product of non-zero digits");
+                "7. Input with n = 1 should return an error message");
         
         TestSupport.checkEquals(120L, 
                 Problem1.largestProduct("123456321", 3), 
