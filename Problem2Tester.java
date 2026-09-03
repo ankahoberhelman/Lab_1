@@ -56,14 +56,14 @@ public class Problem2Tester {
 
         // A whitespace-only input should produce no output.
         input = " ";
-        expected = "" + System.lineSeparator();
+        expected = "";
         TestSupport.checkEquals(expected,
                 Problem2.findDollarWords(input),
                 "Whitespace-only input should produce no output");
          
         // An empty string should produce no output.
         input = "";
-        expected = "" + System.lineSeparator();
+        expected = "";
         TestSupport.checkEquals(expected,
                 Problem2.findDollarWords(input),
                 "Empty input should produce no output");
